@@ -1,4 +1,4 @@
-import MyAppLogo from '@public/beholder.svg';
+import MyAppLogo from '@public/rda.svg';
 
 const appSettings = {
   name: 'MyApp',

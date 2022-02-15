@@ -49,7 +49,7 @@ const UserProfile = () => {
                   className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                 >
                   <div className="py-1 border-b-2">
-                    <h1 className="px-2 text-gray-800 font-bold">Beholder</h1>
+                    <h1 className="px-2 text-gray-800 font-bold">My App</h1>
                   </div>
                   {userNavigation.map((item, idx) => (
                     <Menu.Item key={idx}>

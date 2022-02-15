@@ -21,22 +21,10 @@ const Home: NextPage = () => {
           <table className="table-auto w-full text-center">
             <thead>
               <tr>
-                <th>Host</th>
-                <th>Service</th>
-                <th>Version</th>
-                <th>Last Seen</th>
+                <th>My Data</th>
               </tr>
             </thead>
-            <tbody>
-              {/* {Object.values(beholderStore.beholderServices).map((service) => (
-                <tr key={service.key}>
-                  <td>{service.hostName}</td>
-                  <td>{service.serviceName}</td>
-                  <td>{service.version}</td>
-                  <td>{currentTime.diff(service.lastSeen, 'second')}s</td>
-                </tr>
-              ))} */}
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
         <div className="col-span-2 bg-neutral-focus rounded-md flex justify-center items-center text-neutral-content text-2xl font-extrabold">
@@ -44,14 +32,7 @@ const Home: NextPage = () => {
         </div>
         <div className="row-span-2 col-span-2 bg-base-200 rounded-md flex justify-center items-center text-base-contenttext-2xl font-extrabold"></div>
       </div>
-      <div className="pt-4 pl-5 pr-4 h-72">
-        {/* Filter out hosts that are not daemon hosts and display the number of services that are running on each host */}
-        {/* {Object.values(beholderStore.beholderServices)
-          .filter((service) => service.serviceName === 'daemon')
-          .map((service) => (
-            <DaemonStatus service={service as BeholderDaemonServiceInfo} key={service.key} />
-          ))} */}
-      </div>
+      <div className="pt-4 pl-5 pr-4 h-72"></div>
     </DefaultLayout>
   );
 };
