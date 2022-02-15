@@ -1,0 +1,10 @@
+apps:
+  - name: 'frontend'
+    script: 'yarn install --non-interactive --frozen-lockfile --prefer-offline && NODE_OPTIONS=''--inspect=0.0.0.0:9229 --max_old_space_size=8192'' /srv/app/node_modules/.bin/next'
+    args: 'dev'
+    cwd: '/srv/app/'
+    watch: true
+    ignore_watch: ['node_modules', '.next', 'public', 'src', 'next-env.d.ts']
+    max_memory_restart: 8G
+    restart_delay: 5000
+    exp_backoff_restart_delay: 5000

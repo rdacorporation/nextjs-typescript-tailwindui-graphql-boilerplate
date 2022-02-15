@@ -1,0 +1,57 @@
+name: GraphQL PR
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - 'GraphQL/**'
+      - '!GraphQL/README.md'
+      - '!GraphQL/docs/**'
+
+jobs:
+  validate:
+
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./GraphQL
+      cache-key: myapp-graphql-pr
+    
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ env.working-directory }}
+
+    strategy:
+      matrix:
+        dotnet-version: ['6.x']
+
+    steps:
+      -
+        uses: actions/checkout@v2
+      - 
+        name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v1.9.0
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - 
+        name: Install dependencies
+        run: dotnet restore
+      -
+        name: Add dotnet-format problem matcher
+        uses: xt0rted/dotnet-format-problem-matcher@v1
+      -
+        name: Restore dotnet tools
+        uses: xt0rted/dotnet-tool-restore@v1
+      -
+        name: Run dotnet format
+        uses: xt0rted/dotnet-format@v1
+        with:
+          only-changed-files: "true"
+      - 
+        name: Build
+        run: dotnet build --configuration Release --no-restore
+      # -
+      #   name: Test
+      #   run: dotnet test --no-restore --verbosity normal

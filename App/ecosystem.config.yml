@@ -1,0 +1,5 @@
+apps:
+  - name: 'frontend'
+    script: '/srv/app/node_modules/.bin/next'
+    args: 'start'
+    cwd: '/srv/app/'

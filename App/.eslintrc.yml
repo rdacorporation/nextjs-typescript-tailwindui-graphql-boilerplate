@@ -1,0 +1,20 @@
+extends:
+  - next/core-web-vitals
+  - plugin:@typescript-eslint/recommended # Uses the recommended rules from @typescript-eslint/eslint-plugin
+  - plugin:react-hooks/recommended # Enables react-hooks recommendations
+  - plugin:prettier/recommended # Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+
+rules:
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+  import/first: 2
+  import/newline-after-import: ["error", { count: 1 }]
+  # import/no-relative-parent-imports: "error"
+  import/order: ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"], "newlines-between": "always"}]
+
+  react/prop-types: 'off'
+  react/display-name: [0]
+  '@typescript-eslint/explicit-module-boundary-types': 'off'
+  '@typescript-eslint/no-explicit-any': 'off'
+  '@typescript-eslint/no-unused-vars': [2, { args: 'after-used', argsIgnorePattern: '^_' }]
+  '@next/next/no-html-link-for-pages': 'off'
+  '@next/next/no-img-element': 'off'
