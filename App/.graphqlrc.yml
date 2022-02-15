@@ -8,7 +8,7 @@ schema: myapp.graphql
 #        Accept: application/graphql
 
 generates:
-  src/graphql/titan.ts:
+  src/graphql/myapp.ts:
     documents:
       - "src/**/*.graphql"
     hooks:
