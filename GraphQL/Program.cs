@@ -11,24 +11,12 @@ builder.Logging.AddSimpleConsole(options =>
 
 // Add services to the container.
 builder.Services
-    .AddCors(options => 
-      options.AddPolicy("AllowAll", p => 
-        p.AllowAnyOrigin()
-         .AllowAnyMethod()
-         .AllowAnyHeader()
-      )
-    );
-
-builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
-app.UseCors();
-
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
