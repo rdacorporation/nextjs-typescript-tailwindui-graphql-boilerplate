@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:lts-alpine
 
 RUN mkdir /srv/app && chown 1000:1000 -R /srv/app
 
@@ -19,4 +19,5 @@ VOLUME /srv/app
 
 COPY docker-entrypoint-dev.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint-dev.sh
-ENTRYPOINT ["docker-entrypoint-dev.sh"]
+ENTRYPOINT ["./docker-entrypoint-dev.sh"]
+#ENTRYPOINT ["ls"]

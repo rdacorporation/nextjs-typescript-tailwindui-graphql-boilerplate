@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  app:
+    image: ${DOCKER_REGISTRY-}app
+    container_name: app
+    restart: unless-stopped
+    build:
+      context: ./App
+      dockerfile: Dockerfile
+    depends_on:
+      - graphql
+  graphql:
+    image: ${DOCKER_REGISTRY-}graphql
+    container_name: graphql
+    restart: unless-stopped
+    build:
+      context: ./GraphQL
+      dockerfile: Dockerfile

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    image: app:dev
+    build:
+      context: ./App
+      dockerfile: Dockerfile.dev
+    environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+    volumes:
+      - "./App:/srv/app"
+      - "app_node_modules:/srv/app/node_modules"
+      - "app_next:/srv/app/.next"
+    ports:
+      - 3000:3000
+  graphql:
+    image: graphql:dev
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - 8080:80
+
+volumes:
+  app_node_modules:
+  app_next:
