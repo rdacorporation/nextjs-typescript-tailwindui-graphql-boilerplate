@@ -7,13 +7,16 @@ The frontend utilizes code generation for the GraphQL queries.
 
 Traefik is used to proxy the API to the frontend
 
-#### Getting Started:
+## Getting Started:
 
 Requires Git, Docker, a code editor such as Visual Studio Code.
 
 1. Clone the Repository
 2. Run ```docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d```
-3. Open the browser and navigate to http://app.localhost:3000
+3. Open the browser and navigate to http://app.localhost
 
 
-Also demonstrates Github actions to build and push docker images to the GitHub registry
+The traefik dashboard is exposed at http://traefik.localhost/dashboard/
+
+
+Within this repository are Github Actions that demonstrate a CI process of building and pushing the docker images to the GitHub registry.
