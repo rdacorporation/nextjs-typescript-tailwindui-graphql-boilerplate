@@ -1,0 +1,8 @@
+query getBooks {
+  book {
+    title
+    author {
+      name
+    }
+  }
+}

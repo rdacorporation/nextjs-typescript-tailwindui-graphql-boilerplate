@@ -10,9 +10,13 @@ enableStaticRendering(typeof window === 'undefined');
 export class AppStore {
   @observable lastUpdate?: Date;
   @observable uiStore: UIStore;
+  @observable graphQLUrl: string;
+  @observable graphQLHeaders?: Record<string, any>;
 
   constructor() {
     this.uiStore = new UIStore(this);
+    this.graphQLUrl = '/graphql';
+    this.graphQLHeaders = {};
     makeAutoObservable(this);
   }
 

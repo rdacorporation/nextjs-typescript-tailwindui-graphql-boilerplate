@@ -2,17 +2,22 @@ import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import { observer } from 'mobx-react';
 import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
 
 import DefaultLayout from '@layouts/DefaultLayout';
+import { GetBooksQuery, useGetBooksQuery } from '@src/graphql/myapp';
+
+dayjs.extend(utc);
 
 const Home: NextPage = () => {
-  const [currentTime, setCurrentTime] = useState(dayjs());
-
+  const [currentTime, setCurrentTime] = useState<string>();
+  const { isLoading, isError, data, error } = useGetBooksQuery<GetBooksQuery, any>();
   useEffect(() => {
-    setTimeout(() => {
-      setCurrentTime(dayjs());
-    }, 250);
-  });
+    const timer = setInterval(() => {
+      setCurrentTime(dayjs.utc().format('MM/DD/YYYY  h:mm:ss'));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [currentTime]);
 
   return (
     <DefaultLayout>
@@ -21,14 +26,24 @@ const Home: NextPage = () => {
           <table className="table-auto w-full text-center">
             <thead>
               <tr>
-                <th>My Data</th>
+                <th>My App&apos;s Data</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {isLoading && <span>Loading...</span>}
+              {!isLoading && isError && error && <span>Error: {error.message}</span>}
+              {!isLoading && !isError && data && (
+                <tr>
+                  <td>
+                    {data.book.title} by {data.book.author.name}
+                  </td>
+                </tr>
+              )}
+            </tbody>
           </table>
         </div>
         <div className="col-span-2 bg-neutral-focus rounded-md flex justify-center items-center text-neutral-content text-2xl font-extrabold">
-          <div>{currentTime.format('MM/DD/YYYY  h:mm:ss')}</div>
+          <div>{currentTime}</div>
         </div>
         <div className="row-span-2 col-span-2 bg-base-200 rounded-md flex justify-center items-center text-base-contenttext-2xl font-extrabold"></div>
       </div>

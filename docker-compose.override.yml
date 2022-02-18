@@ -12,15 +12,16 @@ services:
       - "./App:/srv/app"
       - "app_node_modules:/srv/app/node_modules"
       - "app_next:/srv/app/.next"
-    ports:
-      - 3000:3000
   graphql:
     image: graphql:dev
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-    ports:
-      - 8080:80
+  traefik:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.dashboard.rule=Host(`traefik.localhost`)
+      - traefik.http.routers.dashboard.service=api@internal
 
 volumes:
   app_node_modules:

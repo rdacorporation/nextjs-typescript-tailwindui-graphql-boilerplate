@@ -9,7 +9,9 @@
     "type-check": "tsc",
     "eslint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
-    "generate-gql": "graphql-codegen --config .graphqlrc.yml"
+    "refresh-gql": "wget -O myapp.graphql http://localhost:8080/graphql?sdl",
+    "generate-gql": "graphql-codegen --config .graphqlrc.yml",
+    "generate": "yarn refresh-gql && yarn generate-gql"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",

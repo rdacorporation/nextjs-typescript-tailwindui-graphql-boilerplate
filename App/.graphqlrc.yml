@@ -1,16 +1,8 @@
 overwrite: true
-schema: myapp.graphql
-
-#schema:
-#  - "https://titan.localhost/graphql?sdl=true":
-#      method: GET
-#      headers:
-#        Accept: application/graphql
-
+schema: http://localhost:8080/graphql?sdl=true
+documents: 'src/**/*.graphql'
 generates:
   src/graphql/myapp.ts:
-    documents:
-      - "src/**/*.graphql"
     hooks:
         afterOneFileWrite:
           - eslint --fix
@@ -23,9 +15,3 @@ generates:
       fetcher:
         func: "@src/utils/useMyAppFetcher#useMyAppFetcher"
         isReactHook: true
-          
-        # endpoint: "'/graphql/'"
-    extensions: 
-      endpoints:
-        default:
-          url: "https://localhost:3001/graphql"
