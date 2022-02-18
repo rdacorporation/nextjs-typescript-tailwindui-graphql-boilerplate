@@ -27,9 +27,10 @@ The traefik dashboard is exposed at http://traefik.localhost/dashboard/
 
 
 Within this repository are Github Actions that demonstrate a CI process of building and pushing the docker images to the GitHub registry.
+
+
 [![App CD](https://github.com/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate/actions/workflows/app-cd.yml/badge.svg)](https://github.com/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate/actions/workflows/app-cd.yml)
 
 [![GraphQL CD](https://github.com/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate/actions/workflows/graphql-cd.yml/badge.svg)](https://github.com/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate/actions/workflows/graphql-cd.yml)
-
 
 Pull requests welcome.
