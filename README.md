@@ -66,7 +66,7 @@ az webapp create --resource-group $resourceGroupName --plan $aspName --name $app
 # Copy the result of the following command into a browser to see the web app.
 echo http://$appName.azurewebsites.net
 
-# Optional: Enable container CD - Copy the value of CI_CD_URL into the GH Actions workflows and uncomment the 'Trigger CD' actions. Remember to escape the $ sign with \$.
+# Optional: Enable container CD - Copy the value of CI_CD_URL into a Github Secret and update GH Actions workflow to use that secret. If testing the webhook url at the command line, remember to escape the $ sign with \$.
 # az webapp deployment container config --enable-cd --name $appName --resource-group $resourceGroupName
 ```
 
