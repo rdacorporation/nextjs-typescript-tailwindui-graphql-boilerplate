@@ -15,9 +15,16 @@ http:
     dashboard:
       entrypoints:
         - web
+      middlewares:
+        - traefik-strip
       service: api@internal
-      rule: PathPrefix(`/dashboard`)
+      rule: PathPrefix(`/traefik`) || HeadersRegexp(`Referer`, `.*/traefik/.*`)
       priority: 1000
+  middlewares:
+    traefik-strip:
+      stripPrefix:
+        prefixes:
+          - /traefik
   services:
     app:
       loadBalancer:
