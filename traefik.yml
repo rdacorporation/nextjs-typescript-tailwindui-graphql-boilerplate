@@ -1,0 +1,29 @@
+http:
+  routers:
+    app:
+      entrypoints:
+        - web
+      service: app
+      rule: PathPrefix(`/`)
+      priority: 0
+    graphql:
+      service: graphql
+      entrypoints:
+        - web
+      rule: PathPrefix(`/graphql`)
+      priority: 100
+    dashboard:
+      entrypoints:
+        - web
+      service: api@internal
+      rule: PathPrefix(`/dashboard`)
+      priority: 1000
+  services:
+    app:
+      loadBalancer:
+        servers:
+          - url: http://app:3000
+    graphql:
+      loadBalancer:
+        servers:
+          - url: http://graphql:80
