@@ -42,7 +42,7 @@ Any cloud provider that supports containers can be used to deploy the applicatio
 
 Via the Azure CLI, one can deploy this stack to an Azure App Service for Containers.
 
-First, [install and configure the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) - logging into the desired Azure account and subscription then running the following commands:
+First, [install and configure the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) - logging into the desired Azure account and subscription then running the following commands at the root folder of the cloned repository:
 
 ``` bash
 #/bin/bash
