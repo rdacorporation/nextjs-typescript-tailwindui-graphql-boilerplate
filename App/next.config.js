@@ -3,11 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   serverRuntimeConfig: {
     // Will only be available on the server side
-    HELLO_WORLD: 'This is a server runtime config value',
+    HELLO_WORLD: process.env.HELLO_WORLD || 'This is a server runtime config value',
   },
   publicRuntimeConfig: {
     // Will be available on both server and client
-    PUBLIC_HELLO_WORLD: 'This is a public runtime config value',
+    PUBLIC_HELLO_WORLD: process.env.PUBLIC_HELLO_WORLD || 'This is a public runtime config value',
   },
 };
 
