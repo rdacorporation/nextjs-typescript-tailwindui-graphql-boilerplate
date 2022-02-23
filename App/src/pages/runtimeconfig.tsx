@@ -1,3 +1,8 @@
+// ***
+// This page demonstrates how to use dynamic runtime environment variables.
+// Values are passed through via the `serverRuntimeConfig` and `publicRuntimeConfig` objects in `next.config.js`.
+// See https://nextjs.org/docs/api-reference/next.config.js/runtime-configuration for more information.
+// ***
 import getConfig from 'next/config';
 import { NextPageContext } from 'next';
 
