@@ -95,3 +95,9 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      
+      # Uncomment the below to enable CI/CD via a webhook
+      # -
+      #   name: Trigger CD
+      #   run: |
+      #     curl --fail "<URL TO TRIGGER CI/CD>" -H "" -d ""

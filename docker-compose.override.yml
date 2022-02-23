@@ -20,8 +20,11 @@ services:
   traefik:
     labels:
       - traefik.enable=true
-      - traefik.http.routers.dashboard.rule=Host(`traefik.localhost`)
+      - traefik.http.routers.dashboard.entrypoints=web
+      - traefik.http.routers.dashboard.middlewares=traefik-strip
       - traefik.http.routers.dashboard.service=api@internal
+      - traefik.http.routers.dashboard.rule=Host(`app.localhost`) && (PathPrefix(`/traefik`) || HeadersRegexp(`Referer`, `.*/traefik/.*`))
+      - traefik.http.middlewares.traefik-strip.stripprefix.prefixes=/traefik
 
 volumes:
   app_node_modules:

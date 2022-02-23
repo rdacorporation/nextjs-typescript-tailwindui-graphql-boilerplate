@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  app:
+    image: ghcr.io/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate-app:latest
+    container_name: app
+    restart: unless-stopped
+    depends_on:
+      - graphql
+  graphql:
+    image: ghcr.io/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate-graphql:latest
+    container_name: graphql
+    restart: unless-stopped
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - "--ping=true"
+      - "--global.checkNewVersion=false"
+      - "--global.sendAnonymousUsage=false"
+      - "--api.dashboard=true"
+      - "--api.insecure=true"
+      - "--entrypoints.web.address=:80"
+      - "--providers.http.endpoint=https://raw.githubusercontent.com/rdacorporation/nextjs-typescript-tailwindui-graphql-boilerplate/main/traefik.yml"
+    ports:
+      - 80:80    
+
