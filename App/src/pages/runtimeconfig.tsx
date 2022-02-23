@@ -2,6 +2,7 @@ import getConfig from 'next/config';
 import { NextPageContext } from 'next';
 
 import DefaultLayout from '@layouts/DefaultLayout';
+
 interface EnvPageProps {
   message: string;
 }
