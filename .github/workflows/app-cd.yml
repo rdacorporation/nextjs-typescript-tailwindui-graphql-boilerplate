@@ -13,6 +13,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}-app
+  APP_SERVICE_CD_WEBHOOK_URL: ${{ secrets.APP_SERVICE_CD_WEBHOOK_URL }}
   
 jobs:
   docker:
@@ -96,8 +97,8 @@ jobs:
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
       
-      # Uncomment the below to enable CI/CD via a webhook
-      # -
-      #   name: Trigger CD
-      #   run: |
-      #     curl --fail "<URL TO TRIGGER CI/CD>" -H "" -d ""
+      # Notifies the Associated App Service that a new build has completed.
+      -
+        name: Trigger CD
+        run: |
+          curl --fail -H "" -d "" "$APP_SERVICE_CD_WEBHOOK_URL"
