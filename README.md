@@ -11,7 +11,7 @@ Traefik is used to proxy the API to the frontend.
 
 Requires Git, Docker, a code editor such as Visual Studio Code.
 
-1. Clone the Repository
+1. Clone the repository or preferrably, click the 'Use this Template' button above to create your own repository and clone from your repository.
 2. Run ```docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d```
 3. Open the browser and navigate to http://app.localhost
 
