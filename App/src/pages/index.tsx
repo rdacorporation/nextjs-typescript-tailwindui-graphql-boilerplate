@@ -10,7 +10,7 @@ import { GetBooksQuery, useGetBooksQuery } from '@src/graphql/myapp';
 dayjs.extend(utc);
 
 const Home: NextPage = () => {
-  const [currentTime, setCurrentTime] = useState<string>();
+  const [currentTime, setCurrentTime] = useState<string>(dayjs.utc().format('MM/DD/YYYY  h:mm:ss'));
   const { isLoading, isError, data, error } = useGetBooksQuery<GetBooksQuery, any>();
   useEffect(() => {
     const timer = setInterval(() => {
