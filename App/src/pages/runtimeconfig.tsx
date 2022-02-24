@@ -4,7 +4,7 @@
 // See https://nextjs.org/docs/api-reference/next.config.js/runtime-configuration for more information.
 // ***
 import getConfig from 'next/config';
-import { GetServerSideProps, NextPageContext } from 'next';
+import { GetServerSideProps } from 'next';
 
 import DefaultLayout from '@layouts/DefaultLayout';
 
