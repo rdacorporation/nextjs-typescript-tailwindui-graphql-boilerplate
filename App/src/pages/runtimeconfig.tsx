@@ -4,7 +4,7 @@
 // See https://nextjs.org/docs/api-reference/next.config.js/runtime-configuration for more information.
 // ***
 import getConfig from 'next/config';
-import { NextPageContext } from 'next';
+import { GetServerSideProps, NextPageContext } from 'next';
 
 import DefaultLayout from '@layouts/DefaultLayout';
 
@@ -23,8 +23,7 @@ function EnvPage({ message }: EnvPageProps) {
     </DefaultLayout>
   );
 }
-
-EnvPage.getInitialProps = async (_: NextPageContext): Promise<EnvPageProps> => {
+export const getServerSideProps: GetServerSideProps = async (_) => {
   const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 
   // Will only be available on the server-side
@@ -34,7 +33,9 @@ EnvPage.getInitialProps = async (_: NextPageContext): Promise<EnvPageProps> => {
   console.log(publicRuntimeConfig.PUBLIC_HELLO_WORLD);
 
   // Exporting the server runtime config as a prop will make it available via the prop
-  return { message: serverRuntimeConfig.HELLO_WORLD };
+  return {
+    props: { message: serverRuntimeConfig.HELLO_WORLD },
+  };
 };
 
 export default EnvPage;
