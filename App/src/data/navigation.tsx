@@ -13,8 +13,8 @@ export interface Navigation {
 
 const navigation: Navigation[] = [
   { title: 'Dashboard', icon: <FontAwesomeIcon icon={faTachometerAlt} />, current: true, url: '/' },
+  { title: 'Runtime Config', icon: <FontAwesomeIcon icon={faFileCode} />, current: true, url: '/runtimeconfig' },
   { title: 'Flow Designer', icon: <FontAwesomeIcon icon={faProjectDiagram} />, current: true, url: '/flow_designer' },
-  { title: 'Node Editor', icon: <FontAwesomeIcon icon={faFileCode} />, current: true, url: '/node_editor' },
 ];
 
 export default navigation;

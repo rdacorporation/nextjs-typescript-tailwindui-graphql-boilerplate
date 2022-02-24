@@ -2,6 +2,7 @@ import { observer } from 'mobx-react';
 import React, { useEffect } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { templateSettings, template } from 'lodash';
+import Link from 'next/link';
 
 import app from '@src/data/app';
 import nav from '@src/data/navigation';
@@ -40,8 +41,14 @@ const Sidebar = () => {
                   <>
                     <Disclosure.Button className="relative flex flex-row w-full">
                       <span className="w-full flex flex-row items-center h-11 hover:bg-base-300 text-base-content hover:text-base-content border-l-4 border-transparent hover:border-accent-focus pr-6">
-                        <span className="flex-none justify-center items-center ml-3">{item.icon}</span>
-                        <span className="ml-2 text-sm flex-grow text-left tracking-wide truncate">{item.title}</span>
+                        <Link href={item.url ? template(item.url)(urlTemplateData) : ''} passHref={true}>
+                          <a>
+                            <span className="flex-none justify-center items-center ml-3">{item.icon}</span>
+                            <span className="ml-2 text-sm flex-grow text-left tracking-wide truncate">
+                              {item.title}
+                            </span>
+                          </a>
+                        </Link>
                         <span className="flex-none">
                           <svg
                             className={classNames(
