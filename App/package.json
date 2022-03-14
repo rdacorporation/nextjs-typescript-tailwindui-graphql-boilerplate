@@ -44,7 +44,7 @@
     "@graphql-codegen/typescript": "2.4.7",
     "@graphql-codegen/typescript-document-nodes": "2.2.7",
     "@graphql-codegen/typescript-graphql-files-modules": "2.1.1",
-    "@graphql-codegen/typescript-operations": "2.3.2",
+    "@graphql-codegen/typescript-operations": "2.3.4",
     "@graphql-codegen/typescript-react-query": "^3.5.7",
     "@types/lodash": "^4.14.180",
     "@types/node": "17.0.21",
