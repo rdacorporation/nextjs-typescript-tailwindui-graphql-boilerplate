@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import ReactFlow, { removeElements, addEdge, Elements, Position } from 'react-flow-renderer';
+import React from 'react';
+import ReactFlow, { useNodesState, useEdgesState, addEdge, Position } from 'react-flow-renderer';
 
 import DefaultLayout from '@layouts/DefaultLayout';
 
-const initialElements: Elements = [
+const initialNodes = [
   {
     id: 'horizontal-1',
     sourcePosition: Position.Right,
@@ -61,7 +61,9 @@ const initialElements: Elements = [
     data: { label: 'Node 8' },
     position: { x: 750, y: 300 },
   },
+];
 
+const initialEdges = [
   {
     id: 'horizontal-e1-2',
     source: 'horizontal-1',
@@ -114,15 +116,17 @@ const initialElements: Elements = [
 ];
 
 const HorizontalFlow = () => {
-  const [elements, setElements] = useState<Elements>(initialElements);
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const onConnect = (params: any) => setEdges((els) => addEdge(params, els));
   const changeClassName = () => {
-    setElements((elms) =>
-      elms.map((el) => {
-        if (el.type === 'input') {
-          el.className = el.className ? '' : 'dark-node';
+    setNodes((nds) =>
+      nds.map((node) => {
+        if (node.type === 'input') {
+          node.className = node.className ? '' : 'dark-node';
         }
 
-        return { ...el };
+        return { ...node };
       }),
     );
   };
@@ -130,18 +134,13 @@ const HorizontalFlow = () => {
   return (
     <DefaultLayout>
       <ReactFlow
-        elements={elements}
-        onElementsRemove={(elementsToRemove) => setElements((els) => removeElements(elementsToRemove, els))}
-        onConnect={(params) => setElements((els) => addEdge(params, els))}
-        onLoad={(reactFlowInstance) => reactFlowInstance.fitView()}
-        selectNodesOnDrag={false}
-        onNodeMouseEnter={(_, node) => console.log('mouse enter:', node)}
-        onNodeMouseMove={(_, node) => console.log('mouse move:', node)}
-        onNodeMouseLeave={(_, node) => console.log('mouse leave:', node)}
-        onNodeContextMenu={(event, node) => {
-          event.preventDefault();
-          console.log('context menu:', node);
-        }}
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onConnect={onConnect}
+        fitView
+        attributionPosition="bottom-left"
       >
         <button onClick={changeClassName} style={{ position: 'absolute', right: 10, top: 30, zIndex: 4 }}>
           change class name
