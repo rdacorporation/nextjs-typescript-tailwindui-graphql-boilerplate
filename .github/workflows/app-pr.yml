@@ -40,7 +40,7 @@ jobs:
       run: echo "::set-output name=dir::$(yarn cache dir)"
     -
       name: Define yarn caching settings
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -49,13 +49,13 @@ jobs:
           ${{ runner.os }}-${{ env.cache-key }}-yarn-
     -
       name: Define node_modules caching settings
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: '${{ env.working-directory }}/node_modules' 
         key: ${{ runner.os }}-${{ env.cache-key }}-node_modules-${{ hashFiles('${{ env.working-directory }}/yarn.lock') }}
     -
       name: Define NextJS caching settings
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ${{ env.working-directory }}/.next/cache
         key: ${{ runner.os }}-${{ env.cache-key }}-nextjs-${{ hashFiles('${{ env.working-directory }}/yarn.lock') }}
