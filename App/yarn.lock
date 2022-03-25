@@ -2610,10 +2610,10 @@ d3-zoom@^3.0.0:
     d3-selection "2 - 3"
     d3-transition "2 - 3"
 
-daisyui@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-2.12.0.tgz#41a9e10a045aaef7fd1668b13660b31a912d8e7b"
-  integrity sha512-14FakYwC/2fxY7gDzilPn49YVR3e+KGMk/GHmEoEHtmRqfdUbQ0GeSzMDLVedayqadzKjr7mccH49k2pFbYG6Q==
+daisyui@^2.13.2:
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-2.13.2.tgz#4f69470db2acbe3b99271f848cb81848ec8a8ec5"
+  integrity sha512-TXk3rJF107PxJKW1KkrqVyhVBpKBQJ9v2mOxljoeUlTICAp5q7HKgs2XsA6FzLLdQLsJNB6BcOWTDBrg8jaYeQ==
   dependencies:
     color "^4.2"
     css-selector-tokenizer "^0.8.0"
