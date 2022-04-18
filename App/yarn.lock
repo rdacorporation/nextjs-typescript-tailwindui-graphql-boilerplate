@@ -5842,10 +5842,10 @@ react-draggable@^4.4.4:
     clsx "^1.1.1"
     prop-types "^15.6.0"
 
-react-flow-renderer@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.1.0.tgz#0d62a060b25097b9345343ae29a1fb46449ef43d"
-  integrity sha512-vEhGimnFR2WZR4IBnsYMi+S0eJO9hS5K7yWjhTQ4Xz825Tx97iPhz3AC79cOwtGOaFTb9+nhaD+K+ZXY5czHXQ==
+react-flow-renderer@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.1.1.tgz#88e994753d0162286c1cc09bfded7202456b1049"
+  integrity sha512-fWmiW2OrJK1/FbJnQodvQzdFiv8JqwA8xdbzQX64eoxKRbYGkOwmta/CaIKsnmVektDeTD8/smbiwpxFElKdaA==
   dependencies:
     "@babel/runtime" "^7.17.8"
     classcat "^5.0.3"
