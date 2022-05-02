@@ -33,7 +33,7 @@
     "react-flow-renderer": "^10.1.2",
     "react-headless-tabs": "^4.0.2",
     "react-hook-form": "^7.30.0",
-    "react-query": "^3.38.0",
+    "react-query": "^3.38.1",
     "react-split": "^2.0.14",
     "sharp": "^0.30.4"
   },
