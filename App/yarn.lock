@@ -696,15 +696,15 @@
     "@graphql-tools/utils" "^8.1.1"
     tslib "~2.3.0"
 
-"@graphql-codegen/typescript-document-nodes@2.2.8":
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-document-nodes/-/typescript-document-nodes-2.2.8.tgz#93a3eeb4064a323b3e510b2c9f7fe209831310da"
-  integrity sha512-eihEDcOwxMOMBcPu6OpXkCcPL/LkWvOf8d0hIIZn0ms8pMMnbRAg0oj7bog8xNDJUyMPFf42CZKqpX9Qqt3ZFQ==
+"@graphql-codegen/typescript-document-nodes@2.2.9":
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-document-nodes/-/typescript-document-nodes-2.2.9.tgz#0d63142de607fed6edf5c0db142cedd65666790c"
+  integrity sha512-EEtyfLKyiNpBZz/Y27UfUWqB5OaaFPbPlWR+5ay8j07OipTwwe4c2aqMlR288a3ISDyI5YTqyuDmnZaOvrryDQ==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^2.4.0"
-    "@graphql-codegen/visitor-plugin-common" "2.7.4"
+    "@graphql-codegen/visitor-plugin-common" "2.7.5"
     auto-bind "~4.0.0"
-    tslib "~2.3.0"
+    tslib "~2.4.0"
 
 "@graphql-codegen/typescript-graphql-files-modules@2.1.1":
   version "2.1.1"
