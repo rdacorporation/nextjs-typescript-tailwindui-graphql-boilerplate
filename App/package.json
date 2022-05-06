@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.2",
     "@typescript-eslint/parser": "^5.22.0",
     "daisyui": "^2.14.3",
-    "dayjs": "^1.11.1",
+    "dayjs": "^1.11.2",
     "delay": "^5.0.0",
     "graphql": "^16.4.0",
     "lodash": "^4.17.21",
