@@ -747,22 +747,6 @@
     auto-bind "~4.0.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/visitor-plugin-common@2.7.6":
-  version "2.7.6"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-2.7.6.tgz#70be729551fedc090d69fe4f16272bccf5222d28"
-  integrity sha512-XHeopd8z5UE2alv8nn2LrF+qpfRpldeqHOwrmLmlzyCWcuz5vMiZ08CgtE03micQNQJg5s8Z9m72S3FrvBUoAA==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "^2.4.0"
-    "@graphql-tools/optimize" "^1.0.1"
-    "@graphql-tools/relay-operation-optimizer" "^6.3.7"
-    "@graphql-tools/utils" "^8.3.0"
-    auto-bind "~4.0.0"
-    change-case-all "1.0.14"
-    dependency-graph "^0.11.0"
-    graphql-tag "^2.11.0"
-    parse-filepath "^1.0.2"
-    tslib "~2.4.0"
-
 "@graphql-codegen/visitor-plugin-common@2.8.0":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-2.8.0.tgz#f1de3bd5ee123e6f72c06423912a3a83a6044938"
@@ -5789,10 +5773,10 @@ react-headless-tabs@^4.0.2:
   resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-4.0.2.tgz#d5d50498fb5f69dd94217f068dc29ff00d4699c6"
   integrity sha512-1B0nc/HE+333NyvqiXrt4wzFNqj6yn5r/tH9e6MpZVb7KzsMq82oUGILTsgBG18PmxAGil+9TkvofEqVwdk5MQ==
 
-react-hook-form@^7.30.0:
-  version "7.30.0"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.30.0.tgz#c9e2fd54d3627e43bd94bf38ef549df2e80c1371"
-  integrity sha512-DzjiM6o2vtDGNMB9I4yCqW8J21P314SboNG1O0obROkbg7KVS0I7bMtwSdKyapnCPjHgnxc3L7E5PEdISeEUcQ==
+react-hook-form@^7.31.1:
+  version "7.31.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.31.1.tgz#16c357dd366bc226172e6acbb5a1672873bbfb28"
+  integrity sha512-QjtjZ8r8KtEBWWpcXLyQordCraTFxILtyQpaz5KLLxN2YzcC+FZ9LLtOnNGuOnzZo9gCoB+viK3ZHV9Mb2htmQ==
 
 react-is@^16.13.1:
   version "16.13.1"
