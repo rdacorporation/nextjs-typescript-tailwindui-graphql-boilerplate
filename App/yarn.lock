@@ -5768,10 +5768,10 @@ react-flow-renderer@^10.2.2:
     react-draggable "^4.4.5"
     zustand "^3.7.2"
 
-react-headless-tabs@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-4.0.2.tgz#d5d50498fb5f69dd94217f068dc29ff00d4699c6"
-  integrity sha512-1B0nc/HE+333NyvqiXrt4wzFNqj6yn5r/tH9e6MpZVb7KzsMq82oUGILTsgBG18PmxAGil+9TkvofEqVwdk5MQ==
+react-headless-tabs@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-5.0.1.tgz#6740ac0feee992ce1f0e61711ad9bc84990f91ca"
+  integrity sha512-j2QBqnVVc6MJhpGaF219wqrOp9g844Ch+JVBGxJXMfhz3ELzQ7yGLdJQyufXvkuUMqcv8N3GjXSeSLtNHlSKpQ==
 
 react-hook-form@^7.31.1:
   version "7.31.1"
