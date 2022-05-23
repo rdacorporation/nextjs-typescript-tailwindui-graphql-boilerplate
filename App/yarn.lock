@@ -507,10 +507,10 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.9", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2":
-  version "7.17.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
-  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2":
+  version "7.18.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.0.tgz#6d77142a19cb6088f0af662af1ada37a604d34ae"
+  integrity sha512-YMQvx/6nKEaucl0MY56mwIG483xk8SDNdlUwb2Ts6FUpr7fm85DxEmsY18LXBNhcTz6tO6JwZV8w1W06v8UKeg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2316,11 +2316,6 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-clsx@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
-  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
-
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -2520,7 +2515,7 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-3.0.1.tgz#5fc75284e9c2375c36c839411a0cf550cbfc4d5e"
   integrity sha512-rzUyPU/S7rwUflMyLc1ETDeBj0NRuHKKAcvukozwhshr6g6c5d8zh4c2gQjY2bZ0dXeGLWc1PF174P2tVvKhfg==
 
-"d3-drag@2 - 3":
+"d3-drag@2 - 3", d3-drag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/d3-drag/-/d3-drag-3.0.0.tgz#994aae9cd23c719f53b5e10e3a0a6108c69607ba"
   integrity sha512-pWbUJLdETVA8lQNJecMxoXfH6x+mO2UQo8rSmZ+QqxcbyA3hfeprFgIT//HW2nlHChWeIIMwS2Fq+gEARkhTkg==
@@ -5832,24 +5827,16 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-draggable@^4.4.5:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.5.tgz#9e37fe7ce1a4cf843030f521a0a4cc41886d7e7c"
-  integrity sha512-OMHzJdyJbYTZo4uQE393fHcqqPYsEtkjfMgvCHr6rejT+Ezn4OZbNyGH50vv+SunC1RMvwOTSWkEODQLzw1M9g==
+react-flow-renderer@^10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.3.0.tgz#4ce415c7039ace4f92ba1f0ec281f4c6049724ff"
+  integrity sha512-LdjFpiyG6Dbf7rsCLzYvY6/XV9IpfIy9sM3RC7BpMdcUmMPOsQ4JRXKHgNz+NepYDVxUmiBlkHUPYUax7CKqSA==
   dependencies:
-    clsx "^1.1.1"
-    prop-types "^15.8.1"
-
-react-flow-renderer@^10.2.3:
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.2.3.tgz#1f4e717a70423c6a494977eda5c88e5c7e633c29"
-  integrity sha512-dHQHHRZx2jfLGtJAqJ4ys9LpPyBps/eSGAqeAJv18jrEM7aaW2ZV20Ms4X6ZpzTpC1Y0DYtH/lsRJjSB+ZUMzw==
-  dependencies:
-    "@babel/runtime" "^7.17.9"
+    "@babel/runtime" "^7.18.0"
     classcat "^5.0.3"
+    d3-drag "^3.0.0"
     d3-selection "^3.0.0"
     d3-zoom "^3.0.0"
-    react-draggable "^4.4.5"
     zustand "^3.7.2"
 
 react-headless-tabs@^4.0.2:
