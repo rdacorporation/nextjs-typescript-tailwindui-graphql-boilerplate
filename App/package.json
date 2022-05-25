@@ -19,7 +19,7 @@
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
-    "@typescript-eslint/parser": "^5.25.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "daisyui": "^2.15.1",
     "dayjs": "^1.11.2",
     "delay": "^5.0.0",
