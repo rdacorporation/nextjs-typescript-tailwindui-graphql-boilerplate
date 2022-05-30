@@ -35,7 +35,7 @@
     "react-hook-form": "^7.31.3",
     "react-query": "^3.39.0",
     "react-split": "^2.0.14",
-    "sharp": "^0.30.5"
+    "sharp": "^0.30.6"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.2",
