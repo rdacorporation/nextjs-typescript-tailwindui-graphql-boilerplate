@@ -5775,10 +5775,10 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-flow-renderer@^10.3.4:
-  version "10.3.4"
-  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.3.4.tgz#b4be43252501234bac3633fe7f418de976889354"
-  integrity sha512-unuHgPs9ibXXl7JxGSCte2Ni/9/HAoQFLQM2EjgIr4q8bn3jZ34ph6UiLbVFqhcyvA+KppLi/yZBgxxhVXlGCw==
+react-flow-renderer@^10.3.5:
+  version "10.3.5"
+  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.3.5.tgz#529cf325ce77b074ead5b531497b16cd1994ee93"
+  integrity sha512-5aIm4eqmYhSwnV34Zp+aLXLUQ4w5t9LJjPJmlzRWzXEKbLECAWdOjRO/0z+EW54jft7mqp2YaL62ukzmS/Ey3g==
   dependencies:
     "@babel/runtime" "^7.18.0"
     classcat "^5.0.3"
