@@ -5820,10 +5820,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-flow-renderer@^10.3.7:
-  version "10.3.7"
-  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.3.7.tgz#2d5da283b5070a1aefe10849a7dadefc33282195"
-  integrity sha512-0WGyozT4SzMpim8MQRFBR8hqm11FGApXm+UD05BoAejhcUgohvmckBTRIQKxzGC2WQLR/6oXRzwzRYGQdrb4rw==
+react-flow-renderer@^10.3.8:
+  version "10.3.8"
+  resolved "https://registry.yarnpkg.com/react-flow-renderer/-/react-flow-renderer-10.3.8.tgz#23525887ef707e6cd540777a4d2329e91311856d"
+  integrity sha512-owtDCSK6rATiZipew2OYSPPu2sd0VM/QCydN9S+ivrMVwR0vNSSwtsWKqJSq8DL5wXtIEed5gPi4yJqXJA7tLQ==
   dependencies:
     "@babel/runtime" "^7.18.0"
     classcat "^5.0.3"
