@@ -5769,10 +5769,10 @@ react-headless-tabs@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-5.1.2.tgz#6a78b1af7fc1396a213543c1784e8ff3a9c0e3e1"
   integrity sha512-24j5UP7ueo7mSVI1QVknugiAvz9EFT4TN9MDcmLbZ+9qg48zJ1Ng3UIh2KRf+w5nlzHRIP2dLj5xBUs+yFTijQ==
 
-react-hook-form@^7.32.2:
-  version "7.32.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.32.2.tgz#58ec2ab0239ce97969baa2faa03ced13fae913ac"
-  integrity sha512-F1A6n762xaRhvtQH5SkQQhMr19cCkHZYesTcKJJeNmrphiZp/cYFTIzC05FnQry0SspM54oPJ9tXFXlzya8VNQ==
+react-hook-form@^7.33.0:
+  version "7.33.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.33.0.tgz#44a87ddd630f00ebeb0f15aa978f69ca74b8a77b"
+  integrity sha512-h8XoeUHQs1Snx1s/sSvM+eVTSKkWQt8TcrbL+3/Rt5gugxpy4ueL5ZZkubffyNpUyyTz0qM0kwOi2c+JgGTjLA==
 
 react-is@^16.13.1:
   version "16.13.1"
