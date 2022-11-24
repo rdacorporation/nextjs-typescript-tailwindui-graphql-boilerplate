@@ -6070,10 +6070,10 @@ react-flow-renderer@^10.3.17:
     d3-zoom "^3.0.0"
     zustand "^3.7.2"
 
-react-headless-tabs@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-5.1.2.tgz#6a78b1af7fc1396a213543c1784e8ff3a9c0e3e1"
-  integrity sha512-24j5UP7ueo7mSVI1QVknugiAvz9EFT4TN9MDcmLbZ+9qg48zJ1Ng3UIh2KRf+w5nlzHRIP2dLj5xBUs+yFTijQ==
+react-headless-tabs@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/react-headless-tabs/-/react-headless-tabs-6.0.3.tgz#c10c899befdaa4f3fb3a16422810254ecc8e668d"
+  integrity sha512-VBkN/P1Mpc/4WPcbl0Is+LvVzlqjWxX3G6kOxGQZX63zKaVpU0WP5NBS43JqqgZTG7nJ3JMYTHVXe79uTmRg7w==
 
 react-hook-form@^7.39.4:
   version "7.39.4"

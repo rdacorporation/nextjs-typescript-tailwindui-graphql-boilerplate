@@ -31,7 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-flow-renderer": "^10.3.17",
-    "react-headless-tabs": "^5.1.2",
+    "react-headless-tabs": "^6.0.3",
     "react-hook-form": "^7.39.4",
     "react-query": "^3.39.2",
     "react-split": "^2.0.14",
